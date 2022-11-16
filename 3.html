@@ -4,6 +4,7 @@
 <title>WEB1 - JavaScript </title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
+<script src="colors.js"></script>
 </head>
 <body>
 <h1><a href="index.html">WEB</a></h1>
@@ -17,33 +18,7 @@
     <input
     type="button"
     value="night"
-    onclick="
-if(this.value === 'night') {
-    var target = document.querySelector('body');
-    target.style.backgroundColor = 'black';
-    target.style.color= 'white';
-    this.value = 'day';
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while ( i < alist.length) {
-        alist[i].style.color = 'powderblue';
-        console.log(alist[i]);
-        i = i + 1 ;
-    }
-} else {
-var target = document.querySelector('body');
-    target.style.backgroundColor = 'white';
-    target.style.color= 'black';
-    this.value = 'night';
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while ( i < alist.length) {
-        alist[i].style.color = 'black';
-        console.log(alist[i]);
-        i = i + 1 ;
-    }
-}
-">
+    onclick="nightDayHandler(this);">
 <h2>JavaScript 무엇인가?</h2>
 <p style="margin-top: 40px;">
 JavaScript (/ˈdʒɑːvəskrɪpt/),[10] often abbreviated JS, is a programming language that is one of

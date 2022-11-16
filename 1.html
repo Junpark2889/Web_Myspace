@@ -4,7 +4,7 @@
 <title>WEB1 - HTML </title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
-
+<script src="colors.js"></script>
 </head>
 <body>
     
@@ -19,33 +19,7 @@
     <input
     type="button"
     value="night"
-    onclick="
-if(this.value === 'night') {
-    var target = document.querySelector('body');
-    target.style.backgroundColor = 'black';
-    target.style.color= 'white';
-    this.value = 'day';
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while ( i < alist.length) {
-        alist[i].style.color = 'powderblue';
-        console.log(alist[i]);
-        i = i + 1 ;
-    }
-} else {
-var target = document.querySelector('body');
-    target.style.backgroundColor = 'white';
-    target.style.color= 'black';
-    this.value = 'night';
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while ( i < alist.length) {
-        alist[i].style.color = 'black';
-        console.log(alist[i]);
-        i = i + 1 ;
-    }
-}
-">
+    onclick="nightDayHandler(this)">
 <h2>HTML이란 무엇인가?</h2>
 <p><a href="https://www.w3.org/TR/2011/WD-html5-20110405/" title="HTML5 specification">Hypertext Markup
 Language(HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web
